@@ -1,0 +1,30 @@
+**Leetcode challenge 1281 Faster than 100% of given solutions**
+
+
+class Solution {
+    public int subtractProductAndSum(int n) {
+    
+ArrayList<Integer> array = new ArrayList<Integer>();
+do{
+    array.add(n % 10);
+    n /= 10;
+} while  (n > 0);
+    
+
+        int sum = 0; 
+        int product = 1;
+
+for (int i = 0; i < array.size(); i++) { 
+    product *= array.get(i);
+    sum += array.get(i);
+}
+            
+        
+   int result = product - sum;
+        
+   return result; 
+        
+        
+       
+    }
+}
